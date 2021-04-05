@@ -1,0 +1,14 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.header {
+  display: block;
+  margin-top: 7.5px;
+  margin-bottom: 0;
+  color: #ead7d7;
+  font-weight: 100;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100px !important;
+}
