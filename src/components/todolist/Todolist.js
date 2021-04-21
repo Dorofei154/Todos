@@ -28,6 +28,7 @@ export default function Todolist() {
   );
 
   let pressEnter = (e) => {
+    console.log(e.target.value);
     if (
       (e.code === "Enter" || e.code === "NumpadEnter") &&
       e.target.value !== ""
@@ -48,10 +49,12 @@ export default function Todolist() {
     if (arrTodo.length) {
       localStorage.setItem("arrTodo", JSON.stringify(arrTodo));
     }
+    if (localStorage.getItem("arrTodo") === null) return;
     if (
       !arrTodo.length &&
       JSON.parse(localStorage.getItem("arrTodo")).length !== 1
     ) {
+      console.log();
       setArrtodo(JSON.parse(localStorage.getItem("arrTodo")));
     }
   }, [arrTodo]);
@@ -74,7 +77,7 @@ export default function Todolist() {
           onKeyDown={pressEnter}
           placeholder="What needs to be done?"
         />
-        <ul class="list-todo">
+        <ul className="list-todo">
           {arrTodo
             .filter((item) => {
               if (filter !== "") {

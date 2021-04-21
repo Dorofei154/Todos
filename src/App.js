@@ -1,5 +1,3 @@
-import { useState, useCallback } from "react";
-
 import Header from "./components/header/Header";
 import Todolist from "./components/todolist/Todolist";
 

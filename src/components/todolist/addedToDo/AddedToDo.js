@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./addedToDo.css";
-// let deleteTodo = (index) => {};
-// export default deleteTodo;
 export default function AddedToDo(props) {
   const {
     item: { index, value, checked },
